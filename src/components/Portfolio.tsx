@@ -57,7 +57,7 @@ const categories = [
     ],
   },
   {
-    name: "Transfer Aeroporto",
+    name: "Transfer Aereo",
     featured: {
       title: "TransferAero",
       description:
