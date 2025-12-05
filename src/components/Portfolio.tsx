@@ -1,119 +1,206 @@
-import { ExternalLink, Layout, Globe, HeartPulse, Store, Briefcase, Laptop } from 'lucide-react';
+import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const projects = [
+const categories = [
   {
-    title: 'Landing Page - Advocacia',
-    category: 'Landing Page',
-    image: 'https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Layout,
-    description: 'Landing page moderna para escritório de advocacia com formulário de contato integrado'
+    name: "Clínicas Veterinárias",
+    featured: {
+      title: "VetCare Premium",
+      description:
+        "Sistema completo de gestão com agendamento, prontuário eletrônico e controle financeiro.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1661915652986-fe818e1973f9?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    projects: [
+      {
+        title: "PetLife Clínica",
+        image:
+          "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "Animal Care Center",
+        image:
+          "https://plus.unsplash.com/premium_photo-1663133493049-bc00ad37a7dc?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "VetMaster Plus",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+    ],
   },
   {
-    title: 'E-commerce Fashion',
-    category: 'Website',
-    image: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Store,
-    description: 'Loja virtual completa com carrinho de compras e checkout integrado'
+    name: "Escritórios de Advocacia",
+    featured: {
+      title: "Silva & Associados",
+      description:
+        "Site institucional elegante com área do cliente, blog jurídico e sistema de consultas online.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1698084059560-9a53de7b816b?q=80&w=2611&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    projects: [
+      {
+        title: "Advocacia Martins",
+        image:
+          "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "JurisConsult",
+        image:
+          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        title: "Legal Pro Office",
+        image:
+          "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+    ],
   },
   {
-    title: 'Sistema VetCare',
-    category: 'Sistema',
-    image: 'https://images.pexels.com/photos/6235663/pexels-photo-6235663.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: HeartPulse,
-    description: 'Sistema completo de gestão para clínica veterinária com agenda e prontuários'
+    name: "Transfer Aeroporto",
+    featured: {
+      title: "TransferAero",
+      description:
+        "Plataforma de reservas online com pagamento integrado, rastreamento em tempo real e app mobile.",
+      image:
+        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop",
+    },
+    projects: [
+      {
+        title: "AeroShuttle",
+        image:
+          "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop",
+      },
+      {
+        title: "CityTransfer",
+        image:
+          "https://media.istockphoto.com/id/1195019183/photo/shuttle-bus-brought-people-to-the-airport-for-the-flight.jpg?s=1024x1024&w=is&k=20&c=FFR_8dQdtb-dCJ1TMzuk7iU8QzzBS0CjEJUdFifTIR4=",
+      },
+      {
+        title: "AirportGo",
+        image:
+          "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=400&h=250&fit=crop",
+      },
+    ],
   },
   {
-    title: 'Portfolio Arquitetura',
-    category: 'Website',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Briefcase,
-    description: 'Site portfolio para escritório de arquitetura com galeria de projetos'
+    name: "Consultórios Odontológicos",
+    featured: {
+      title: "OdontoPlus",
+      description:
+        "Gestão completa com odontograma digital, agendamento inteligente e prontuário eletrônico.",
+      image:
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=500&fit=crop",
+    },
+    projects: [
+      {
+        title: "Sorriso Perfeito",
+        image:
+          "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=250&fit=crop",
+      },
+      {
+        title: "DentalCare Pro",
+        image:
+          "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=250&fit=crop",
+      },
+      {
+        title: "OdontoClin",
+        image:
+          "https://images.unsplash.com/photo-1445527815219-ecbfec67492e?w=400&h=250&fit=crop",
+      },
+    ],
   },
-  {
-    title: 'Landing Page - SaaS',
-    category: 'Landing Page',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Laptop,
-    description: 'Landing page de conversão para plataforma SaaS com preços e CTA otimizado'
-  },
-  {
-    title: 'Site Institucional',
-    category: 'Website',
-    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Globe,
-    description: 'Website corporativo multi-páginas com blog e área de clientes'
-  }
 ];
 
-export function Portfolio() {
+const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-b from-black via-gray-900 to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <section id="portfolio" className="py-24 bg-card/30">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Portfólio
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mt-4 mb-6">
+            Nossa
+            <span className="text-primary"> Vitrine</span>
           </h2>
-          <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Confira alguns dos projetos que desenvolvi para meus clientes
+          <p className="text-muted-foreground text-lg">
+            Conheça alguns dos projetos que desenvolvemos para nossos clientes
+            de diversos segmentos.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-xl bg-gray-900 border border-gray-800
-                       hover:border-red-600 transition-all duration-500 hover:scale-105
-                       hover:shadow-2xl hover:shadow-red-600/30"
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-
-                <div className="absolute top-4 right-4 p-3 bg-red-600/90 rounded-lg backdrop-blur-sm">
-                  <project.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
-                </div>
-              </div>
-
-              <div className="p-6 relative">
-                <div className="mb-2">
-                  <span className="text-red-600 text-sm font-semibold uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-600 transition-colors duration-300">
-                  {project.title}
+        <div className="space-y-20">
+          {categories.map((category, catIndex) => (
+            <div key={catIndex} className="space-y-6">
+              {/* Category Title */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground px-4">
+                  {category.name}
                 </h3>
-
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <button className="flex items-center gap-2 text-red-600 font-semibold group-hover:gap-3 transition-all duration-300">
-                  Ver Projeto
-                  <ExternalLink className="w-4 h-4" />
-                </button>
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
               </div>
 
-              <div className="absolute inset-0 border-2 border-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              {/* Featured Project - Large Image */}
+              <div className="group relative overflow-hidden rounded-2xl bg-card border border-border card-hover">
+                <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+                  <img
+                    src={category.featured.image}
+                    alt={category.featured.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold mb-4">
+                    Destaque
+                  </span>
+                  <h4 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
+                    {category.featured.title}
+                  </h4>
+                  <p className="text-muted-foreground text-base md:text-lg max-w-2xl">
+                    {category.featured.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Smaller Projects Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {category.projects.map((project, projIndex) => (
+                  <div
+                    key={projIndex}
+                    className="group relative overflow-hidden rounded-xl bg-card border border-border card-hover"
+                  >
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <h5 className="text-lg font-heading font-semibold text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {project.title}
+                      </h5>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <button className="px-8 py-4 bg-red-600 text-white font-semibold rounded-lg
-                           hover:bg-red-700 transition-all duration-300 transform hover:scale-105
-                           hover:shadow-2xl hover:shadow-red-600/50">
+          <Button variant="outline" size="lg" className="group">
             Ver Todos os Projetos
-          </button>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Portfolio;
