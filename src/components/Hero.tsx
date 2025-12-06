@@ -16,18 +16,19 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 mt-8 animate-fade-up">
             <span className="text-sm text-muted-foreground">
-              Desenvolvimento Web Profissional
+              Sistema de Gerenciamento para Clinica Veterinária
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 animate-fade-up-delay-1">
-            Transformamos suas
-            <span className="text-gradient block mt-2">ideias em código</span>
+          <h1 className="text-4xl md:text-6xl lg:text-6xl font-heading font-bold mb-6 animate-fade-up-delay-1">
+            Transformando a gestão
+            <span className="text-gradient block mt-2">da sua clínica!</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up-delay-2">
-            Sistemas, Web sites, Loja virtual, e-commerce, Landing pages,  e soluções digitais personalizadas para
-            clínicas, consultórios, advocacia e empresas de todos os segmentos.
+            Sistemas, Web sites, Loja virtual, e-commerce, Landing pages, e
+            soluções digitais personalizadas para clínicas, consultórios,
+            advocacia e empresas de todos os segmentos.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">

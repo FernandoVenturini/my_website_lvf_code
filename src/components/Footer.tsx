@@ -1,19 +1,17 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "#", label: "Facebook" }, // Ensure 'Facebook' is correctly capitalized
   ];
 
   const quickLinks = [
-    { href: "#inicio", label: "Início" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#portfolio", label: "Portfólio" },
-    { href: "#sobre", label: "Sobre" },
+    { href: "#inicio", label: "Home" },
+    { href: "#planos", label: "Planos" },
+    { href: "#teste_gratis", label: "Teste Grátis" },
     { href: "#contato", label: "Contato" },
   ];
 
@@ -28,7 +26,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-muted-foreground mb-4">
-              Transformando ideias em soluções digitais de alta qualidade.
+              Transformando sua clinica em soluções digitais de alta qualidade.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -67,17 +65,13 @@ const Footer = () => {
               Serviços
             </h3>
             <ul className="space-y-2">
-              {[
-                "Landing Pages",
-                "Sites Institucionais",
-                "Sistemas Web",
-                "E-commerce",
-                "Aplicações PWA",
-              ].map((service, index) => (
-                <li key={index}>
-                  <span className="text-muted-foreground">{service}</span>
-                </li>
-              ))}
+              {["Home", "Planos", "Teste Grátis", "Contato"].map(
+                (service, index) => (
+                  <li key={index}>
+                    <span className="text-muted-foreground">{service}</span>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>

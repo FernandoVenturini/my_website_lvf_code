@@ -6,10 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#inicio", label: "Início" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#portfolio", label: "Portfólio" },
-    { href: "#sobre", label: "Sobre" },
+    { href: "#inicio", label: "Home" },
+    { href: "#planos", label: "Planos" },
+    { href: "#teste_gratis", label: "Teste Grátis" },
     { href: "#contato", label: "Contato" },
   ];
 
@@ -17,9 +16,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#inicio" className="flex items-center gap-2">
+          <a href="#inicio" className="flex flex-col items-center">
             <span className="text-2xl font-heading font-bold text-foreground">
-              &lt;<span className="text-primary">LVF</span>_Code/&gt;
+              <span className="text-primary">SisGer</span>Vet
+            </span>
+            <span className="text-xs md:text-sm mt-0.5 text-gray-600">
+              Sistema de Gerenciamento Veterinário
             </span>
           </a>
 
@@ -38,7 +40,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <Button variant="hero" size="lg">
-              <a href="#contato">Orçamento Grátis</a>
+              <a href="#login">Login Nuvem</a>
             </Button>
           </div>
 
@@ -66,7 +68,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-4">
-                Orçamento Grátis
+                <a href="#login">Login Nuvem</a>
               </Button>
             </div>
           </nav>
