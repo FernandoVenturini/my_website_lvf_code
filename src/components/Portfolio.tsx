@@ -3,27 +3,28 @@ import { Button } from "@/components/ui/button";
 
 const categories = [
   {
-    name: "Clínicas Veterinárias",
+    name: "Plano 3 Full Nuvem",
     featured: {
-      title: "VetCare Premium",
+      title:
+        "O número que acompanha o Plano Full 3 representam o número de acessos simultâneos ao Sofvet.",
       description:
-        "Sistema completo de gestão com agendamento, prontuário eletrônico e controle financeiro.",
+        "Exemplo: Se você tem 3 dispositivos selecione o plano Full 3",
       image:
         "https://plus.unsplash.com/premium_photo-1661915652986-fe818e1973f9?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     projects: [
       {
-        title: "PetLife Clínica",
+        title: "Full 3 Nuvem - Primeiro Acesso",
         image:
           "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        title: "Animal Care Center",
+        title: "Full 3 Nuvem - Segundo Acesso",
         image:
           "https://plus.unsplash.com/premium_photo-1663133493049-bc00ad37a7dc?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        title: "VetMaster Plus",
+        title: "Full 3 Nuvem - Terceiro Acesso",
         image:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -118,15 +119,16 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-            Portfólio
+            Como escolher seu plano
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mt-4 mb-6">
-            Nossa
-            <span className="text-primary"> Vitrine</span>
+            Tem problemas de acesso estável a
+            <span className="text-primary"> Internet?</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Conheça alguns dos projetos que desenvolvemos para nossos clientes
-            de diversos segmentos.
+            Para melhor atendê-lo, o Sofvet oferece 3 planos, com valores e
+            níveis de acesso diferenciados. Os planos Nuvem proporcionam acesso
+            100% online, sendo necessário apenas conexão com a internet. Nós temos a solução.
           </p>
         </div>
 
@@ -154,7 +156,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <span className="inline-block px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold mb-4">
-                    Destaque
+                    Plano Full...
                   </span>
                   <h4 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
                     {category.featured.title}
