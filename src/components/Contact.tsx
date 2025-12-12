@@ -94,9 +94,8 @@ const Contact = () => {
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Contato
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mt-4 mb-6">
-            Vamos conversar sobre seu
-            <span className="text-primary"> projeto</span>?
+          <h2 className="text-4xl font-bold text-center mb-8">
+            Fale com a gente agora e teste grátis por 14 dias
           </h2>
           <p className="text-muted-foreground text-lg">
             Entre em contato e receba um orçamento personalizado para suas
@@ -116,7 +115,8 @@ const Contact = () => {
                   E-mail
                 </h3>
                 <p className="text-muted-foreground">
-                  contatolvfcode@gmail.com
+                  suporte@sofvet.com.br
+
                 </p>
               </div>
             </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-1">
                   Localização
                 </h3>
-                <p className="text-muted-foreground">Nottinghan - UK</p>
+                <p className="text-muted-foreground">United Kingdon - UK</p>
               </div>
             </div>
           </div>

@@ -1,67 +1,80 @@
-import { ArrowRight, Code, Sparkles } from "lucide-react";
+import { ArrowRight, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-32 lg:pt-36"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+      {/* Background sutil vermelho */}
+      <div className="absolute inset-0 bg-gradient-to-b from-red-950/20 via-black to-black" />
+      <div className="absolute top-20 left-10 w-96 h-96 bg-red-600/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-red-700/10 rounded-full blur-3xl animate-pulse" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 mt-8 animate-fade-up">
-            <span className="text-sm text-muted-foreground">
-              Tudo que sua clínica precisa, num só lugar
-            </span>
+      <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Badge — AGORA TOTALMENTE VISÍVEL */}
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-600/10 border border-red-600/30 text-red-400 text-sm font-bold mb-8">
+            <HeartHandshake className="w-5 h-5" />
+            Feito por veterinários, para veterinários
           </div>
 
-          <h1 className="text-2xl md:text-5xl lg:text-5xl font-heading font-bold mb-6 animate-fade-up-delay-1">
-            Gestão simples, rápida e 100%
-            <span className="text-gradient block mt-2">na nuvem.</span>
+          {/* Título principal */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight">
+            <span className="text-white">Sof</span>
+            <span className="text-red-600">Vet</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up-delay-2">
-            Com o <span className="text-gradient mt-2">SofVet</span>, você
-            gerencia sua clínica de qualquer lugar, a qualquer hora — com todos
-            os dados 100% seguros na nuvem e sempre na palma da sua mão.
+          <p className="text-2xl md:text-4xl font-bold text-gray-300 mt-6">
+            O software que sua clínica <span className="text-red-500">realmente</span> merece
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-3">
-            <Button variant="hero" size="xl" className="group">
-              <a href="#teste_gratis">Teste Grátis</a>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <p className="text-xl text-gray-400 mt-8 max-w-3xl mx-auto">
+            Agenda, prontuário, financeiro, estoque, multi-clínica — tudo simples, rápido e 100% na nuvem.
+            <br />
+            <span className="text-red-400 font-bold">Chega de planilha e sistema travando.</span>
+          </p>
+
+          {/* Botões */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+            <Button
+              size="xl"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold text-xl px-12 py-8 rounded-2xl shadow-2xl shadow-red-600/30 hover:shadow-red-600/50 hover:scale-105 transition-all"
+              asChild
+            >
+              <a href="#planos" className="flex items-center gap-3">
+                Testar 14 dias grátis
+                <ArrowRight className="w-6 h-6" />
+              </a>
             </Button>
-            <Button variant="outline" size="xl">
-              <Code className="w-5 h-5" />
-              <a href="#planos">Planos</a>
+
+            <Button
+              size="xl"
+              variant="outline"
+              className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white font-bold text-xl px-12 py-8 rounded-2xl"
+              asChild
+            >
+              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
+                Falar no WhatsApp
+              </a>
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
             {[
-              { value: "", label: "100% na nuvem" },
-              { value: "", label: "Usado por mais de 1000 clínicas" },
-              { value: "", label: "Agenda" },
-              { value: "", label: "Acesse de qualquer lugar" },
-              { value: "", label: "Estoque" },
-              { value: "", label: "Financeiro" },
-              { value: "", label: "Clientes" },
-              { value: "", label: "Controle total" },
-              { value: "", label: "O software veterinário que simplifica sua vida" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-primary mb-2">
+              { value: "1.200+", label: "Clínicas ativas" },
+              { value: "24/7", label: "Suporte veterinário" },
+              { value: "0", label: "Fidelidade" },
+              { value: "100%", label: "Na nuvem" },
+            ].map((stat) => (
+              <div key={stat.value}>
+                <div className="text-4xl md:text-5xl font-black text-red-500">
                   {stat.value}
                 </div>
-                <div className="text-1xl text-muted-foreground">
-                  {stat.label}
-                </div>
+                <div className="text-gray-400 mt-2">{stat.label}</div>
               </div>
             ))}
           </div>

@@ -6,72 +6,96 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "#inicio", label: "Início" },
+    { href: "#funcionalidades", label: "Funcionalidades" },
     { href: "#planos", label: "Planos" },
-    { href: "#teste_gratis", label: "Teste Grátis" },
+    { href: "#sobre", label: "Sobre" },
     { href: "#contato", label: "Contato" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#inicio" className="flex flex-col items-center">
-            <span className="text-2xl font-heading font-bold text-foreground">
-              <span className="text-primary">Sof</span>Vet
-            </span>
-            <span className="text-xs md:text-sm mt-0.5 text-gray-600">
-              Software Veterinário
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-red-900/30">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-18 md:h-20">
+
+          {/* Logo SofVet com texto embaixo */}
+          <a href="#inicio" className="flex flex-col items-start group">
+            <div className="text-3xl md:text-4xl font-black tracking-tighter leading-none">
+              <span className="text-white">Sof</span>
+              <span className="text-red-600">Vet</span>
+            </div>
+            <span className="text-xs text-gray-500 tracking-widest mt-1 hidden sm:block">
+              SOFTWARE VETERINÁRIO
             </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-gray-300 hover:text-red-500 font-medium transition-all duration-300 hover:scale-105"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="hero" size="lg">
-              <a href="#login">Login Nuvem</a>
+            <Button variant="ghost" size="lg" asChild>
+              <a href="https://app.sofvet.com.br" target="_blank" rel="noopener">
+                Login Nuvem
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 shadow-lg hover:shadow-red-600/50"
+              asChild
+            >
+              <a href="#planos">Testar 14 dias grátis</a>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white p-2"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border animate-fade-up">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden py-6 border-t border-red-900/30 bg-black/95">
+            <nav className="flex flex-col gap-5 px-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
+                  className="text-gray-300 hover:text-red-500 font-medium text-lg py-2 transition"
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                <a href="#login">Login Nuvem</a>
-              </Button>
-            </div>
-          </nav>
+              <div className="pt-4 space-y-3">
+                <Button variant="ghost" className="w-full text-white" asChild>
+                  <a href="https://app.sofvet.com.br" target="_blank" rel="noopener">
+                    Login Nuvem
+                  </a>
+                </Button>
+                <Button
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg h-12"
+                  asChild
+                >
+                  <a href="#planos">Testar 14 dias grátis</a>
+                </Button>
+              </div>
+            </nav>
+          </div>
         )}
       </div>
     </header>
