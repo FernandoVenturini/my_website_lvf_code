@@ -90,16 +90,22 @@ const Contact = () => {
   return (
     <section id="contato" className="py-24 bg-card/30">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-5xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Contato
           </span>
-          <h2 className="text-4xl font-bold text-center mb-8">
-            Fale com a gente agora e teste grátis por 14 dias
+          <h2 className="text-5xl font-bold text-center mb-8">
+            Fale com a gente <span className="text-red-600">agora</span> e <span className="text-red-600">teste grátis</span> por 14 dias...
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Entre em contato e receba um orçamento personalizado para suas
-            necessidades.
+		  <Button
+              size="lg"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 shadow-lg hover:shadow-red-600/50"
+              asChild
+            >
+              <a href="#planos">Testar 14 dias grátis</a>
+            </Button>
+          <p className="text-muted-foreground text-lg pt-5">
+            Nao perca essa oportunidade!
           </p>
         </div>
 
@@ -115,7 +121,7 @@ const Contact = () => {
                   E-mail
                 </h3>
                 <p className="text-muted-foreground">
-                  suporte@sofvet.com.br
+					suportesofvet@gmail.com
 
                 </p>
               </div>
@@ -160,7 +166,7 @@ const Contact = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-1">
                   Localização
                 </h3>
-                <p className="text-muted-foreground">United Kingdon - UK</p>
+                <p className="text-muted-foreground">Sao Paulo - SP</p>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Badge — AGORA TOTALMENTE VISÍVEL */}
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-600/10 border border-red-600/30 text-red-400 text-sm font-bold mb-8">
             <HeartHandshake className="w-5 h-5" />
-            Feito por veterinários, para veterinários
+            Feito por quem ja atuou na area.
           </div>
 
           {/* Título principal */}
@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-2xl md:text-4xl font-bold text-gray-300 mt-6">
-            O software que sua clínica <span className="text-red-500">realmente</span> merece
+            O software que sua clínica <span className="text-red-500">realmente</span> merece!
           </p>
 
           <p className="text-xl text-gray-400 mt-8 max-w-3xl mx-auto">
@@ -63,7 +63,8 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-11 pb-10
+		  ">
             {[
               { value: "1.200+", label: "Clínicas ativas" },
               { value: "24/7", label: "Suporte veterinário" },

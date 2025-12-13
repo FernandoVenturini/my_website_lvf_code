@@ -5,8 +5,8 @@ const About = () => {
     <section id="sobre" className="py-28 bg-zinc-950 border-t border-red-900/20">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black text-white">
-            Feito por quem <span className="text-red-600">vive</span> clínica veterinária
+          <h2 className="text-5xl md:text-5xl font-black text-white">
+            Construido por quem <span className="text-red-600">possui experiência prática</span> em clínica veterinária
           </h2>
           <p className="text-xl text-gray-400 mt-6 max-w-3xl mx-auto">
             Não somos programadores que "acham que entendem". Somos veterinários e devs que cansaram de sistema ruim.
@@ -40,8 +40,8 @@ const About = () => {
         </div>
 
         <div className="text-center mt-16">
-          <p className="text-3xl font-bold text-white">
-            Junte-se às <span className="text-red-500">1.200+</span> clínicas que já escolheram o SofVet
+          <p className="text-3xl font-bold text-white pt-11">
+            Junte-se às <span className="text-red-500">1.200+</span> clínicas que já escolheram o <span className="text-red-500">SofVet</span>.
           </p>
         </div>
       </div>

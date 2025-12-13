@@ -39,7 +39,7 @@ const Footer = () => {
             <h4 className="font-bold text-white mb-4">Suporte</h4>
             <ul className="space-y-3 text-gray-400">
               <li>WhatsApp: (11) 9XXXX-XXXX</li>
-              <li>suporte@sofvet.com.br</li>
+              <li>suportesofvet@gmail.com</li>
               <li>Seg a Sex - 8h às 17h</li>
             </ul>
           </div>

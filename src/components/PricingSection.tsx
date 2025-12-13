@@ -62,7 +62,7 @@ export default function PricingSection() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Escolha o plano ideal para sua clínica
+                        Escolha o plano <span className="text-red-600"> ideal</span> para sua clínica.
                     </h2>
                     <p className="text-gray-400 text-lg">
                         Sem pegadinha. Cancele quando quiser.
@@ -84,8 +84,9 @@ export default function PricingSection() {
                         >
                             {/* Badge "Mais Popular" */}
                             {plan.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                                    <span className="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                                <div className="absolute -top-0 left-1/2 -translate-x-1/2 pt-1">
+                                    <span className="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg
+									">
                                         MAIS POPULAR
                                     </span>
                                 </div>
