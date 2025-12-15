@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-red-900/20 text-center text-gray-500 text-sm">
-          <p>© {year} <span className="text-red-500 font-bold">SofVet</span> • Todos os direitos reservados • Feito com <Heart className="inline w-4 h-4 text-red-500" />.</p>
+          <p>© {year} <span className="text-red-500 font-bold">SofVet</span> • Todos os direitos reservados • Feito com <Heart className="inline w-4 h-4 text-red-500" />. Desenvolvido por &lt;LVF_Code/&gt;</p>
         </div>
       </div>
     </footer>
