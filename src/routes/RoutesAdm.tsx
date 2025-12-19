@@ -11,6 +11,8 @@ import Layout from "../components/Layout";
 import NovaFicha from "../pages/fichas/NovaFicha";
 import ListaFichas from "../pages/fichas/ListaFichas";
 import EditarFicha from "../pages/fichas/EditarFicha";
+import TabelaVacinas from '../pages/tabelas/TabelaVacinas';
+import AgendaRetornos from '@/pages/agenda/AgendaRetornos';
 
 export default function RoutesAdm() {
   return (
@@ -27,6 +29,8 @@ export default function RoutesAdm() {
         <Route path="/fichas/nova" element={<PrivateRoute><NovaFicha /></PrivateRoute>} />
         <Route path="/fichas/lista" element={<PrivateRoute><ListaFichas /></PrivateRoute>} />
         <Route path="/fichas/editar/:id" element={<PrivateRoute><EditarFicha /></PrivateRoute>} />
+		<Route path="/tabelas/vacinas" element={<PrivateRoute><TabelaVacinas /></PrivateRoute>} />
+		<Route path="/agenda/retornos" element={<PrivateRoute><AgendaRetornos /></PrivateRoute>} />
         {/* Adicione mais rotas protegidas aqui */}
       </Route>
 
