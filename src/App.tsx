@@ -16,7 +16,7 @@ import ListaFichas from './pages/fichas/ListaFichas';
 import EditarFicha from './pages/fichas/EditarFicha';
 
 
-// ← ADICIONEI A DEFINIÇÃO DO queryClient
+// ← ADICIONADO A DEFINIÇÃO DO queryClient
 const queryClient = new QueryClient();
 
 const App = () => (
