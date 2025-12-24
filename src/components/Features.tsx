@@ -107,8 +107,8 @@ const Features = () => {
 
                 {/* Call to action no final */}
                 <div className="text-center mt-20">
-                    <p className="text-4xl font-bold text-white mb-6">
-                        Chega de planilha e <span className="text-red-600"> sistema travando</span>.
+                    <p className="text-5xl font-bold text-white mb-6">
+                        Chega de planilha e <span className="text-red-600"> sistema travando</span>!
                     </p>
                     <a
                         href="#planos"
