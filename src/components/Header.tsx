@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // ← ADICIONEI: Import necessário para navegação interna
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,10 +45,9 @@ const Header = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-4">
+            {/* ← ALTEREI: Botão "Login Nuvem" agora leva para /login do nosso sistema web */}
             <Button variant="ghost" size="lg" asChild>
-              <a href="https://app.sofvet.com.br" target="_blank" rel="noopener">
-                Login Nuvem
-              </a>
+              <Link to="/login">Acessar Sistema</Link>
             </Button>
             <Button
               size="lg"
@@ -82,10 +82,9 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-3">
+                {/* ← ALTERADO: No mobile também leva para /login do nosso sistema */}
                 <Button variant="ghost" className="w-full text-white" asChild>
-                  <a href="https://app.sofvet.com.br" target="_blank" rel="noopener">
-                    Login Nuvem
-                  </a>
+                  <Link to="/login">Login Nuvem</Link>
                 </Button>
                 <Button
                   className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg h-12"
